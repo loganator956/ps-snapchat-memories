@@ -4,6 +4,9 @@ if ((Test-Path -Path "memories") -eq $false) {
     New-Item -Path "memories" -ItemType Directory
 }
 
+$i = 0
+$l = $data.'Saved Media'.Count
+
 foreach ($file in $data.'Saved Media') {
     $jsonLink = $file.'Download Link'
     $date = $file.Date.Replace(" UTC", "")
@@ -15,6 +18,7 @@ foreach ($file in $data.'Saved Media') {
     $DownloadedFile = Get-Item -Path "memories\$fileName"
     $DownloadedFile.CreationTimeUtc = $date
     $DownloadedFile.LastWriteTimeUtc = $date
-    Write-Host "Downloaded $fileName"
+    Write-Host "[$i/$l] Downloaded $fileName"
     exiftool "-AllDates<filemodifydate" $DownloadedFile.FullName
+    $i = $i + 1
 }
