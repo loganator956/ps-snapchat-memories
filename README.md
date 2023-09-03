@@ -10,6 +10,8 @@ Currently only applies dates to the file properties (`CreationTime` and `LastWri
 
 The script simply downloads the files into a `./memories` folder and reads from `./memories_history.json`
 
+The script is based on the assumption that `exiftool` is in your `PATH`
+
 ## Usage
 
 ```Powershell
