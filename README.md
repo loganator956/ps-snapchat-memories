@@ -1,4 +1,4 @@
-# ps-snapchat-memories
+# PS Snapchat Memories
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white)
 [![License](https://img.shields.io/github/license/loganator956/ps-snapchat-memories?style=for-the-badge)](https://github.com/loganator956/ps-snapchat-memories/blob/master/LICENSE)
